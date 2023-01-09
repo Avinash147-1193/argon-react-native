@@ -4,6 +4,7 @@ import { Image, ScrollView, StyleSheet } from "react-native";
 import { DrawerItem as DrawerCustomItem } from "../components";
 import Images from "../constants/Images";
 import React from "react";
+import { argonTheme } from "../constants";
 
 function CustomDrawerContent({
   drawerPosition,
@@ -13,7 +14,7 @@ function CustomDrawerContent({
   state,
   ...rest
 }) {
-  const screens = ["Home", "Profile", "Account", "Elements", "Articles"];
+  const screens = [ "Profile", "Account", "Elements", "Articles"];
   return (
     <Block
       style={styles.container}
@@ -45,9 +46,6 @@ function CustomDrawerContent({
                 borderWidth: StyleSheet.hairlineWidth,
               }}
             />
-            <Text color="#8898AA" style={{ marginTop: 16, marginLeft: 8 }}>
-              DOCUMENTATION
-            </Text>
           </Block>
           <DrawerCustomItem title="Getting Started" navigation={navigation} />
         </ScrollView>

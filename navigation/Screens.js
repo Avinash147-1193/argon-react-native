@@ -79,7 +79,7 @@ function ArticlesStack(props) {
           header: ({ navigation, scene }) => (
             <Header title="Articles" navigation={navigation} scene={scene} />
           ),
-          cardStyle: { backgroundColor: "#F8F9FE" },
+          cardStyle: { backgroundColor: "#F8E6E6" },
         }}
       />
       <Stack.Screen
@@ -221,7 +221,7 @@ function AppStack(props) {
       style={{ flex: 1 }}
       drawerContent={(props) => <CustomDrawerContent {...props} />}
       drawerStyle={{
-        backgroundColor: "white",
+        backgroundColor: argonTheme.COLORS.PRIMARY_DEFAULT,
         width: width * 0.8,
       }}
       drawerContentOptions={{

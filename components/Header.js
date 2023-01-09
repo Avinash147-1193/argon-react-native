@@ -23,7 +23,7 @@ const BellButton = ({isWhite, style, navigation}) => (
   </TouchableOpacity>
 );
 
-const BasketButton = ({isWhite, style, navigation}) => (
+const ChatButton = ({isWhite, style, navigation}) => (
   <TouchableOpacity style={[styles.button, style]} onPress={() => navigation.navigate('Pro')}>
     <Icon
       family="ArgonExtra"
@@ -56,50 +56,48 @@ class Header extends React.Component {
     if (title === 'Title') {
       return [
         <BellButton key='chat-title' navigation={navigation} isWhite={white} />,
-        <BasketButton key='basket-title' navigation={navigation} isWhite={white} />
       ]
     }
 
     switch (title) {
       case 'Home':
         return ([
-          <BellButton key='chat-home' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-home' navigation={navigation} isWhite={white} />
+          <ChatButton key='basket-home' navigation={navigation} isWhite={white} />
         ]);
       case 'Deals':
         return ([
           <BellButton key='chat-categories' navigation={navigation} />,
-          <BasketButton key='basket-categories' navigation={navigation} />
+          <ChatButton key='basket-categories' navigation={navigation} />
         ]);
       case 'Categories':
         return ([
           <BellButton key='chat-categories' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-categories' navigation={navigation} isWhite={white} />
+          <ChatButton key='basket-categories' navigation={navigation} isWhite={white} />
         ]);
       case 'Category':
         return ([
           <BellButton key='chat-deals' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-deals' navigation={navigation} isWhite={white} />
+          <ChatButton key='basket-deals' navigation={navigation} isWhite={white} />
         ]);
       case 'Profile':
         return ([
           <BellButton key='chat-profile' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-deals' navigation={navigation} isWhite={white} />
+          <ChatButton key='basket-deals' navigation={navigation} isWhite={white} />
         ]);
       case 'Product':
         return ([
           <SearchButton key='search-product' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-product' navigation={navigation} isWhite={white} />
+          <ChatButton key='basket-product' navigation={navigation} isWhite={white} />
         ]);
       case 'Search':
         return ([
           <BellButton key='chat-search' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-search' navigation={navigation} isWhite={white} />
+          <ChatButton key='basket-search' navigation={navigation} isWhite={white} />
         ]);
       case 'Settings':
         return ([
           <BellButton key='chat-search' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-search' navigation={navigation} isWhite={white} />
+          <ChatButton key='basket-search' navigation={navigation} isWhite={white} />
         ]);
       default:
         break;

@@ -10,22 +10,13 @@ class DrawerItem extends React.Component {
     const { title, focused } = this.props;
 
     switch (title) {
-      case "Home":
-        return (
-          <Icon
-            name="shop"
-            family="ArgonExtra"
-            size={14}
-            color={focused ? "white" : argonTheme.COLORS.PRIMARY}
-          />
-        );
       case "Elements":
         return (
           <Icon
             name="map-big"
             family="ArgonExtra"
-            size={14}
-            color={focused ? "white" : argonTheme.COLORS.ERROR}
+            size={17}
+            color={focused ? argonTheme.COLORS.ERROR : argonTheme.COLORS.ERROR}
           />
         );
       case "Articles":
@@ -33,8 +24,8 @@ class DrawerItem extends React.Component {
           <Icon
             name="spaceship"
             family="ArgonExtra"
-            size={14}
-            color={focused ? "white" : argonTheme.COLORS.PRIMARY}
+            size={argonTheme.DRAWER_FONT.SIZE}
+            color={focused ? argonTheme.COLORS.PRIMARY : argonTheme.COLORS.PRIMARY}
           />
         );
       case "Profile":
@@ -42,8 +33,8 @@ class DrawerItem extends React.Component {
           <Icon
             name="chart-pie-35"
             family="ArgonExtra"
-            size={14}
-            color={focused ? "white" : argonTheme.COLORS.WARNING}
+            size={argonTheme.DRAWER_FONT.SIZE}
+            color={focused ? argonTheme.COLORS.WARNING : argonTheme.COLORS.WARNING}
           />
         );
       case "Account":
@@ -51,7 +42,7 @@ class DrawerItem extends React.Component {
           <Icon
             name="calendar-date"
             family="ArgonExtra"
-            size={14}
+            size={argonTheme.DRAWER_FONT.SIZE}
             color={focused ? "white" : argonTheme.COLORS.INFO}
           />
         );
@@ -59,7 +50,7 @@ class DrawerItem extends React.Component {
         return (<Icon
           name="spaceship"
           family="ArgonExtra"
-          size={14}
+          size={argonTheme.DRAWER_FONT.SIZE}
           color={focused ? "white" : "rgba(0,0,0,0.5)"}
         />);
       case "Log out":
